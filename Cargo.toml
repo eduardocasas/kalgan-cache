@@ -1,5 +1,5 @@
 [package]
-name = "cache"
+name = "kalgan_cache"
 version = "0.1.16"
 edition = "2018"
 description = "A wrapper for redis crate used by Kalgan Framework."

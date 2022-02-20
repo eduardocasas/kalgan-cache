@@ -12,9 +12,8 @@ impl Cache {
     /// Creates and return the `Cache` instance.
     /// # Examples:
     /// ```
-    /// use cache::Cache;
+    /// use kalgan_cache::Cache;
     /// # use std::env;
-    ///
     /// let cache: Cache = Cache::new(env::var("REDIS_SERVER").unwrap().to_string());
     /// ```
     pub fn new(redis_address: String) -> Cache {
@@ -25,9 +24,8 @@ impl Cache {
     /// Inserts a record in Redis database with the given arguments key-value.
     /// # Examples:
     /// ```
-    /// # use cache::Cache;
+    /// # use kalgan_cache::Cache;
     /// # use std::env;
-    ///
     /// # let mut cache: Cache = Cache::new(env::var("REDIS_SERVER").unwrap().to_string());
     /// cache.insert("key", "value");
     /// # assert_eq!(cache.get("key").unwrap(), "value");
@@ -41,9 +39,8 @@ impl Cache {
     /// Deletes a record in Redis database by key.
     /// # Examples:
     /// ```
-    /// # use cache::Cache;
+    /// # use kalgan_cache::Cache;
     /// # use std::env;
-    ///
     /// # let mut cache: Cache = Cache::new(env::var("REDIS_SERVER").unwrap().to_string());
     /// # cache.insert("key", "value");
     /// cache.delete("key");
@@ -58,9 +55,8 @@ impl Cache {
     /// Checks if a record in Redis database exists.
     /// # Examples:
     /// ```
-    /// # use cache::Cache;
+    /// # use kalgan_cache::Cache;
     /// # use std::env;
-    ///
     /// # let mut cache: Cache = Cache::new(env::var("REDIS_SERVER").unwrap().to_string());
     /// # cache.insert("key", "value");
     /// cache.exists("key");
@@ -79,9 +75,8 @@ impl Cache {
     /// Gets a record in Redis database by key.
     /// # Examples:
     /// ```
-    /// # use cache::Cache;
+    /// # use kalgan_cache::Cache;
     /// # use std::env;
-    ///
     /// # let mut cache: Cache = Cache::new(env::var("REDIS_SERVER").unwrap().to_string());
     /// # cache.insert("key", "value");
     /// let key: String = cache.get("key").unwrap();

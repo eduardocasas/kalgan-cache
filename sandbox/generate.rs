@@ -6,7 +6,7 @@ use std::io::Write;
 
 fn main() {
     logger_init();
-    let mut conn = cache::Cache::new(env::var("REDIS_SERVER").unwrap().to_string());
+    let mut conn = kalgan_cache::Cache::new(env::var("REDIS_SERVER").unwrap().to_string());
     let key = "test";
     let value = "1";
     info!("Creating key...");
@@ -25,7 +25,7 @@ fn main() {
         None => info!("Key Not Found"),
     }
 }
-fn check_key(conn: &mut cache::Cache, key: &str) {
+fn check_key(conn: &mut kalgan_cache::Cache, key: &str) {
     info!(
         "{}",
         if conn.exists(key) {
