@@ -27,7 +27,7 @@ let key: String = cache.get("key").unwrap();
 For further information please visit:
 
 * [Official Kalgan Site](https://kalgan.eduardocasas.com)
-* [API Documentation on docs.rs](https://docs.rs/crate/kalgan-cache/latest)
+* [API Documentation on docs.rs](https://docs.rs/kalgan-cache)
 
 
 ## License
